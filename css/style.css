@@ -1,0 +1,674 @@
+/*Simple Memory Game*/
+/*Author: Nahid Ibrahimov*/
+
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+ul {list-style: none;padding:0;margin:0;}
+
+body {
+	padding: 0;
+	margin: 0;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.fl-l {
+	float: left;
+}
+
+
+.o-h {
+	overflow: hidden;
+}
+
+.max-h-100p {
+	max-height: 100%;
+}
+
+.h-100p {
+	height: 100%;
+}
+
+.object-fit-c {
+	object-fit: cover;
+}
+
+/*COLORS*/
+.c-a1a1a1 {
+	color: #a1a1a1;
+}
+
+.c-afafaf {
+	color: #afafaf;
+}
+
+.c-white {
+	color: #fff;
+}
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.d-b {
+	display: block;
+}
+
+.i-b {
+
+	display: inline-block;
+
+}
+
+.v-a-m {
+	vertical-align: middle;
+}
+
+.pn-rl {
+	position: relative;
+}
+
+.pn-ab {
+	position: absolute;
+}
+.z-i-2 {
+	z-index: 2;
+}
+
+.tp-0 {
+	top: 0;
+}
+
+.lf-0 {
+	left: 0;
+}
+
+.tp-50p {
+	top: 50%;
+}
+
+.t-a-c {
+	text-align: center;
+}
+
+.l-h-16 {
+	line-height: 16px;
+}
+
+.l-h-17 {
+	line-height: 17px;
+}
+
+.l-h-18 {
+	line-height: 18px;
+}
+
+.l-h-19 {
+	line-height: 19px;
+}
+
+.l-h-20 {
+	line-height: 20px;
+}
+
+.l-h-25 {
+	line-height: 25px;
+}
+
+.l-h-30 {
+	line-height: 30px;
+}
+
+.l-h-55 {
+	line-height: 55px;
+}
+
+.f-s-14 {
+	font-size: 14px;
+}
+
+.f-s-15 {
+	font-size: 15px;
+}
+
+.f-s-16 {
+	font-size: 16px;
+}
+
+.f-s-18 {
+	font-size: 18px;
+}
+
+.f-s-20 {
+	font-size: 20px;
+}
+
+.f-s-22 {
+	font-size: 22px;
+}
+
+.f-s-24 {
+	font-size: 24px;
+}
+
+.f-s-25 {
+	font-size: 25px;
+}
+
+.f-s-27 {
+	font-size: 27px;
+}
+
+.f-s-30 {
+	font-size: 30px;
+}
+
+.f-s-33 {
+	font-size: 33px;
+}
+
+.f-s-58 {
+	font-size: 58px;
+}
+
+.f-s-60 {
+	font-size: 60px;
+}
+
+.f-w-b {
+	font-weight: bold;
+}
+
+/* WIDTH */
+
+.w-20p {
+	width: 20%;
+}
+
+.w-25p {
+	width: 25%;
+}
+
+.w-28p {
+	width: 28%;
+}
+
+.w-30p {
+	width: 30%;
+}
+
+.w-33p {
+	width: 33.33%;
+}
+
+.w-40p {
+	width: 40%;
+}
+
+.w-44p {
+	width: 44%;
+}
+
+.w-50p {
+	width: 50%;
+}
+
+.w-60p {
+	width: 60%;
+}
+
+.w-70p {
+	width: 70%;
+}
+
+.w-100p {
+	width: 100%;
+}
+
+
+.max-w-100p {
+	max-width: 100%;
+}
+
+/*PADDING*/
+
+.pl-0 {
+	padding-left: 0px !important;
+}
+
+.pl-5 {
+	padding-left: 5px;
+}
+
+.pl-8 {
+	padding-left: 8px;
+}
+
+.pl-10 {
+	padding-left: 10px;
+}
+
+.pl-13 {
+	padding-left: 13px;
+}
+
+.pl-15 {
+	padding-left: 15px;
+}
+
+.pl-18 {
+	padding-left: 18px;
+}
+
+.pl-20 {
+	padding-left: 20px;
+}
+
+.pl-25 {
+	padding-left: 25px;
+}
+
+.pl-30 {
+	padding-left: 30px;
+}
+
+.pl-50 {
+	padding-left: 50px;
+}
+
+.pl-55 {
+	padding-left: 55px;
+}
+
+.pl-100 {
+	padding-left: 100px;
+}
+
+.pr-5 {
+	padding-right: 5px;
+}
+
+.pr-8 {
+	padding-right: 8px;
+}
+
+.pr-10 {
+	padding-right: 10px;
+}
+
+.pr-13 {
+	padding-right: 13px;
+}
+
+.pr-15 {
+	padding-right: 15px;
+}
+
+.pr-18 {
+	padding-right: 18px;
+}
+
+.pr-20 {
+	padding-right: 20px;
+}
+
+.pr-25 {
+	padding-right: 25px;
+}
+
+.pr-30 {
+	padding-right: 30px;
+}
+
+.pr-50 {
+	padding-right: 50px;
+}
+
+.pr-55 {
+	padding-right: 55px;
+}
+
+.pr-80 {
+	padding-right: 80px;
+}
+
+.pr-90 {
+	padding-right: 90px;
+}
+
+.pr-100 {
+	padding-right: 100px;
+}
+
+.pt-4 {
+	padding-top: 4px;
+}
+
+.pt-5 {
+	padding-top: 5px;
+}
+
+.pt-6 {
+	padding-top: 6px;
+}
+
+.pt-8 {
+	padding-top: 8px;
+}
+
+.pt-10 {
+	padding-top: 10px;
+}
+
+.pt-15 {
+	padding-top: 15px;
+}
+
+.pt-20 {
+	padding-top: 20px;
+}
+
+.pt-25 {
+	padding-top: 25px;
+}
+
+.pt-30 {
+	padding-top: 30px;
+}
+
+.pt-40 {
+	padding-top: 40px;
+}
+
+.pt-60 {
+	padding-top: 60px;
+}
+
+.pb-4 {
+	padding-bottom: 4px;
+}
+
+.pb-5 {
+	padding-bottom: 5px;
+}
+
+.pb-6 {
+	padding-bottom: 6px;
+}
+
+.pb-7 {
+	padding-bottom: 7px;
+}
+
+.pb-8 {
+	padding-bottom: 8px;
+}
+
+
+.pb-10 {
+	padding-bottom: 10px;
+}
+
+.pb-15 {
+	padding-bottom: 15px;
+}
+
+.pb-20 {
+	padding-bottom: 20px;
+}
+
+.pb-25 {
+	padding-bottom: 25px;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+.pb-40 {
+	padding-bottom: 40px;
+}
+
+.pb-60 {
+	padding-bottom: 60px;
+}
+
+.pb-70 {
+	padding-bottom: 70px;
+}
+
+
+
+/*MARGINS*/
+
+.m-lr-a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.ml-5 {
+	margin-left: 5px;
+}
+
+.mr-5 {
+	margin-right: 5px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mt-45 {
+	margin-top: 45px;
+}
+
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.br-1 {
+	border: 1px;
+}
+
+.br-2 {
+	border: 2px;
+}
+
+.br-3 {
+	border: 3px;
+}
+
+.br-l-1 {
+	border-left: 1px solid;
+}
+
+.br-l-2 {
+	border-left: 2px solid;
+}
+
+.br-l-3 {
+	border-left: 3px solid;
+}
+
+.br-b-1 {
+	border-bottom: 1px solid;
+}
+
+.br-b-2 {
+	border-bottom: 2px solid;
+}
+
+.br-b-3 {
+	border-bottom: 3px solid;
+}
+
+.br-b-4 {
+	border-bottom: 4px solid;
+}
+
+.br-b-5 {
+	border-bottom: 5px solid;
+}
+
+
+.br-s-s {
+	border-style: solid;
+}
+
+.br-c-w {
+	border-color: #fff;
+}
+
+.br-c-eee {
+	border-color: #eee;
+}
+
+.br-c-333 {
+	border-color: #333;
+}
+
+.br-b-3cc395 {
+	border-bottom-color: #3cc395;
+}
+
+.br-r-1 {
+	border-radius: 1px;
+}
+
+.br-r-2 {
+	border-radius: 2px;
+}
+
+.br-r-3 {
+	border-radius: 3px;
+}
+
+.br-r-4 {
+	border-radius: 4px;
+}
+
+.br-r-5 {
+	border-radius: 5px;
+}
+
+.br-r-7 {
+	border-radius: 7px;
+}
+
+.br-r-10 {
+	border-radius: 10px;
+}
+
+.br-r-15 {
+	border-radius: 15px;
+}
+
+
+.up-case {
+	text-transform: uppercase;;
+}
+
+.t-r {
+	text-align: right;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-3cc395 {
+	background-color: #3cc395;
+}
+
+.bg-3cc3b5 {
+	background-color: #3cc3b5;
+}
+
+.bg-2da89b {
+	background-color: #2da89b;
+}
+
+.bg-fe7250 {
+	background-color: #fe7250;
+}
+
+.bg-f5f0ED {
+	background-color: #f5f0ED;
+}
+ 	/*CUSTOM*/
+
+ 	.card-wrapper {
+ 		cursor: pointer;
+		color: #333;
+ 	}
+
+	.card {
+		width: 130px;
+ 		height: 130px;
+		transition: transform 0.3s;
+		transform-style: preserve-3d;
+	}
+
+	.text {
+		backface-visibility: hidden;
+		pointer-events: none;
+		border: 2px solid;
+    	border-radius: 10px;
+	}
+
+ 	.img {
+ 		transform: rotateY(180deg);
+ 		pointer-events: none;
+ 		border: 2px solid;
+ 		backface-visibility: hidden;
+    	border-radius: 10px;
+ 	}
+
+ 	.b-v-h {
+ 		backface-visibility: hidden;
+ 	}
+
+ 	.click {
+ 		cursor: pointer;
+ 		text-transform: uppercase;
+ 	}
+
+ 	.click:hover {
+ 		text-decoration: underline;
+ 	}
+
+ 	.roboto {
+ 		font-family: 'Roboto', sans-serif;
+ 	}
